@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <form id="testform" method="POST" action="https://7000-yellow-lion-m3odfn59.ws-us03.gitpod.io/posts" onsubmit="sendForm()">
+    
         <div>
             <label>Title</label>
             <input type="text" name="title" id="title">
@@ -26,9 +26,10 @@
             <input type="text" name="location" id="location">
         </div>
         <div>Upload Image> <input type="file" id='thefile' />
-            <button type="submit">Submit</button>
+
         </div>
-    </form>
+                    <button type="submit" onclick="sendForm()">Submit</button>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
         integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
         crossorigin="anonymous"></script>
