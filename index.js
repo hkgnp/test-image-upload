@@ -2,7 +2,7 @@ let sendForm = async (req, res) => {
   /// Send to collection 'POST DETAILS'
   let postDetails = await axios({
     method: 'post',
-    url: 'https://7000-yellow-lion-m3odfn59.ws-us03.gitpod.io/posts',
+    url: 'https://7000-amethyst-crocodile-iawxnu1g.ws-us03.gitpod.io/posts',
     data: {
       title: document.querySelector('#title').value,
       description: document.querySelector('#description').value,
@@ -19,7 +19,7 @@ let sendForm = async (req, res) => {
   // Fetch the signed url
   const key = postObjectId + '_' + file.name;
   const response = await axios.get(
-    `https://7000-yellow-lion-m3odfn59.ws-us03.gitpod.io/uploader/sign?key=${key}&type=${file.type}`
+    `https://7000-amethyst-crocodile-iawxnu1g.ws-us03.gitpod.io/uploader/sign?key=${key}&type=${file.type}`
   );
   const url = response.data.url;
 
@@ -36,16 +36,15 @@ let sendForm = async (req, res) => {
   // data: {media: "https://msw-keeposted-images.s3-ap-southeast-1.amazonaws.com/" + objectId + '_' + file.name}
   let mediaDetails = await axios({
     method: 'post',
-    url: 'https://7000-yellow-lion-m3odfn59.ws-us03.gitpod.io/media',
+    url: 'https://7000-amethyst-crocodile-iawxnu1g.ws-us03.gitpod.io/media',
     data: {
       postId: postObjectId,
       mediaUrl:
         'https://msw-keeposted-images.s3-ap-southeast-1.amazonaws.com/' +
-        objectId +
+        postObjectId +
         '_' +
         file.name,
     },
   });
-  console.log(mediaDetails);
   alert('Post successful');
 };
