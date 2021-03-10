@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div>
+      <label>Title</label>
+      <input type="text" name="title" id="title" />
+    </div>
+    <div>
+      <label>Category</label>
+      <input type="text" name="category" id="category" />
+    </div>
+    <div>
+      <label>Description</label>
+      <textarea name="description" id="description" rows="5"></textarea>
+    </div>
+    <div>
+      <label>Location</label>
+      <input type="text" name="location" id="location" />
+    </div>
+    <div>Upload Image> <input type="file" id="thefile" /></div>
+    <button type="submit" onclick="sendForm()">Submit</button>
+
+    <div id="results" style="white-space: pre-wrap"></div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
